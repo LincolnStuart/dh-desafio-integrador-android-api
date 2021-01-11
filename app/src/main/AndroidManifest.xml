@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DesafioIntegradorAPIMarvel">
-        <activity android:name=".MainActivity">
+        <activity android:name=".view.activity.RegistrationActivity"
+            android:parentActivityName=".view.activity.LoginActivity"/>
+        <activity android:name=".view.activity.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
