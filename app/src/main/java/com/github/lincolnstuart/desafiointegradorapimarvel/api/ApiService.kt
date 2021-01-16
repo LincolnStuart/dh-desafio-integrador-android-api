@@ -45,6 +45,7 @@ object ApiService {
                 .addQueryParameter("ts", ts)
                 .addQueryParameter("apikey", PUBLIC_KEY)
                 .addQueryParameter("hash", hash)
+                .addQueryParameter("orderBy", "-modified")
                 .build()
             Log.i("URL INTERCEPTOR", "getAuthorizationInterceptor: $url")
             val request = chain.request()

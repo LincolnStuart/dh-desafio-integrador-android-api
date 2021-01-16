@@ -33,7 +33,7 @@ class ComicListAdapter(
                 .load("${comic.thumbnail.path}/${Constants.MarvelApi.IMAGE_PATH}.${comic.thumbnail.extension}")
                 .into(ivItemComicPoster)
             Log.i("BINDING", "bind: ${comic.thumbnail.path}/${Constants.MarvelApi.IMAGE_PATH}.${comic.thumbnail.extension}")
-            tvItemComicSerieNumber.text = comic.id.toString()
+            tvItemComicSerieNumber.text = comic.issueNumber.toString()
             itemView.setOnClickListener {
                 onClickComic(comic)
             }

@@ -1,5 +1,9 @@
 package com.github.lincolnstuart.desafiointegradorapimarvel.model
 
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
 data class ResponseMarvelApiComics(
     val attributionHTML: String,
     val attributionText: String,
@@ -8,4 +12,4 @@ data class ResponseMarvelApiComics(
     val data: Data,
     val etag: String,
     val status: String
-)
+): Parcelable

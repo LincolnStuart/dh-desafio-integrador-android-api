@@ -1,16 +1,17 @@
 package com.github.lincolnstuart.desafiointegradorapimarvel.view.activity
 
-import android.graphics.Typeface
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.github.lincolnstuart.desafiointegradorapimarvel.R
 import com.github.lincolnstuart.desafiointegradorapimarvel.databinding.ActivityComicListBinding
 import com.github.lincolnstuart.desafiointegradorapimarvel.model.ResponseMarvelApiComics
+import com.github.lincolnstuart.desafiointegradorapimarvel.model.Result
 import com.github.lincolnstuart.desafiointegradorapimarvel.view.adapter.ComicListAdapter
 import com.github.lincolnstuart.desafiointegradorapimarvel.viewmodel.ComicViewModel
 
@@ -29,7 +30,7 @@ class ComicListActivity : AppCompatActivity() {
     private fun alterFontFamilyActionBar() {
         val view = TextView(this)
         view.text = supportActionBar?.title
-        view.typeface = ResourcesCompat.getFont(this, R.font.marvel);
+        view.typeface = ResourcesCompat.getFont(this, R.font.marvel)
         supportActionBar?.customView = view
     }
 
@@ -52,8 +53,19 @@ class ComicListActivity : AppCompatActivity() {
         binding.rvComicListItems.apply {
             layoutManager = GridLayoutManager(this@ComicListActivity, 3)
             adapter = ComicListAdapter(it.data.results) {
-                Toast.makeText(this@ComicListActivity, it.title, Toast.LENGTH_LONG).show()
+                onClickComic(it)
             }
         }
     }
+
+    private fun onClickComic(comic: Result) {
+        val intent = Intent(this@ComicListActivity, ComicDetailActivity::class.java)
+        intent.putExtra(COMIC_KEY, comic)
+        startActivity(intent)
+    }
+
+    companion object {
+        const val COMIC_KEY = "comic"
+    }
+
 }

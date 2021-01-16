@@ -9,4 +9,7 @@ interface MarvelApi {
 
     @GET("comics")
     suspend fun comics(): Response<ResponseMarvelApiComics>
+
+    @GET("comics/{comicId}/Characters")
+    suspend fun characters(comicId: Int): Response<ResponseMarvelApiComics>
 }
