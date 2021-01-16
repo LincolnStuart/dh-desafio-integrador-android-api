@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Marvel</string>
     <string name="title_box">title box</string>
-    <string name="login_description">Welcome to the Marvel HQ's</string>
+    <string name="login_description">Welcome to the Marvel HQs</string>
     <string name="e_mail">E-mail</string>
     <string name="password">Password</string>
     <string name="login_fields_box">Login fields box</string>
@@ -13,4 +13,5 @@
     <string name="name">Name</string>
     <string name="person_add_background">Person add background</string>
     <string name="person_add">Person add</string>
+    <string name="comic_poster">Comic poster</string>
 </resources>

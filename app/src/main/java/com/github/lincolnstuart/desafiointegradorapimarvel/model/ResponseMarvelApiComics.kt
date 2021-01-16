@@ -1,6 +1,6 @@
 package com.github.lincolnstuart.desafiointegradorapimarvel.model
 
-data class MarvelResponse(
+data class ResponseMarvelApiComics(
     val attributionHTML: String,
     val attributionText: String,
     val code: Int,

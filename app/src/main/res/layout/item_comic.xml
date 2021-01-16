@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ivItemComicPoster"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/comic_poster"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/bg_white_border"
+        android:cropToPadding="true"
+        android:padding="5dp"
+        tools:src="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/tvItemComicSerieNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/ivItemComicPoster"
+        app:layout_constraintStart_toStartOf="@id/ivItemComicPoster"
+        app:layout_constraintTop_toBottomOf="@id/ivItemComicPoster"
+        tools:text="#99" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

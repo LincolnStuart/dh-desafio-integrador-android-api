@@ -1,7 +1,6 @@
 package com.github.lincolnstuart.desafiointegradorapimarvel.model
 
-data class ItemXX(
-    val name: String,
-    val resourceURI: String,
+data class Date(
+    val date: String,
     val type: String
 )

@@ -1,8 +1,8 @@
 package com.github.lincolnstuart.desafiointegradorapimarvel.model
 
-data class Stories(
+data class Characters(
     val available: Int,
     val collectionURI: String,
-    val items: List<ItemXX>,
+    val items: List<Item>,
     val returned: Int
 )

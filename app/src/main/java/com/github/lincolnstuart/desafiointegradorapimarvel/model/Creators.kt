@@ -1,8 +1,8 @@
 package com.github.lincolnstuart.desafiointegradorapimarvel.model
 
-data class Comics(
+data class Creators(
     val available: Int,
     val collectionURI: String,
-    val items: List<Item>,
+    val items: List<ItemX>,
     val returned: Int
 )

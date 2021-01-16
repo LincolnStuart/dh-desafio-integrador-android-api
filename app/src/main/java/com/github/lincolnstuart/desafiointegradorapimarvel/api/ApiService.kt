@@ -13,6 +13,8 @@ import java.util.concurrent.TimeUnit
 
 object ApiService {
 
+    val marvelApi: MarvelApi = getMarvelApi().create(MarvelApi::class.java)
+
     fun getMarvelApi() : Retrofit{
         return Retrofit.Builder()
             .baseUrl(BASE_URL)
@@ -41,7 +43,7 @@ object ApiService {
                 .url()
                 .newBuilder()
                 .addQueryParameter("ts", ts)
-                .addQueryParameter("apiKey", PUBLIC_KEY)
+                .addQueryParameter("apikey", PUBLIC_KEY)
                 .addQueryParameter("hash", hash)
                 .build()
             Log.i("URL INTERCEPTOR", "getAuthorizationInterceptor: $url")
