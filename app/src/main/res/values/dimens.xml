@@ -3,4 +3,6 @@
     <dimen name="login_box_radius">10dp</dimen>
     <dimen name="margin_box_login">16dp</dimen>
     <dimen name="comic_border_size">5dp</dimen>
+    <dimen name="regular_margin">16dp</dimen>
+    <dimen name="title">22sp</dimen>
 </resources>

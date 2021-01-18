@@ -1,117 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context=".view.activity.RegistrationActivity">
 
-    <ImageView
-        android:id="@+id/ivRegistrationRedBox"
-        android:layout_width="0dp"
-        android:layout_height="375dp"
-        android:layout_margin="@dimen/margin_box_login"
-        android:contentDescription="@string/title_box"
-        android:src="@drawable/bg_red_box"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivRegistrationRedBox"
+            style="@style/AuthRedBox"
+            android:layout_width="0dp"
+
+            android:layout_height="375dp"
+            android:contentDescription="@string/title_box"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
 
 
-    <ImageView
-        android:id="@+id/ivRegistrationRoundedBackground"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/bg_rounded_icon_background"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.2"
-        android:contentDescription="@string/person_add_background"/>
+        <ImageView
+            android:id="@+id/ivRegistrationRoundedBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/person_add_background"
+            android:src="@drawable/bg_rounded_icon_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.2" />
 
-    <ImageView
-        android:contentDescription="@string/person_add"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_person_add"
-        app:layout_constraintTop_toTopOf="@id/ivRegistrationRoundedBackground"
-        app:layout_constraintStart_toStartOf="@id/ivRegistrationRoundedBackground"
-        app:layout_constraintEnd_toEndOf="@id/ivRegistrationRoundedBackground"
-        app:layout_constraintBottom_toBottomOf="@id/ivRegistrationRoundedBackground"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/person_add"
+            android:src="@drawable/ic_person_add"
+            app:layout_constraintBottom_toBottomOf="@id/ivRegistrationRoundedBackground"
+            app:layout_constraintEnd_toEndOf="@id/ivRegistrationRoundedBackground"
+            app:layout_constraintStart_toStartOf="@id/ivRegistrationRoundedBackground"
+            app:layout_constraintTop_toTopOf="@id/ivRegistrationRoundedBackground" />
 
-    <ImageView
-        android:id="@+id/ivRegistrationWhiteBox"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="64dp"
-        android:contentDescription="@string/login_fields_box"
-        android:src="@drawable/bg_white_box"
-        app:layout_constraintBottom_toBottomOf="@id/ivRegistrationRedBox"
-        app:layout_constraintEnd_toEndOf="@id/ivRegistrationRedBox"
-        app:layout_constraintStart_toStartOf="@id/ivRegistrationRedBox"
-        app:layout_constraintTop_toTopOf="@id/ivRegistrationRedBox" />
+        <ImageView
+            android:id="@+id/ivRegistrationWhiteBox"
+            style="@style/AuthWhiteBox"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="64dp"
+            android:contentDescription="@string/login_fields_box"
+            app:layout_constraintBottom_toBottomOf="@id/ivRegistrationRedBox"
+            app:layout_constraintEnd_toEndOf="@id/ivRegistrationRedBox"
+            app:layout_constraintStart_toStartOf="@id/ivRegistrationRedBox"
+            app:layout_constraintTop_toTopOf="@id/ivRegistrationRedBox" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilRegistrationName"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:hint="@string/name"
-        app:layout_constraintEnd_toEndOf="@id/ivRegistrationWhiteBox"
-        app:layout_constraintStart_toStartOf="@id/ivRegistrationWhiteBox"
-        app:layout_constraintTop_toTopOf="@id/ivRegistrationWhiteBox">
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilRegistrationName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:hint="@string/name"
+            app:layout_constraintEnd_toEndOf="@id/ivRegistrationWhiteBox"
+            app:layout_constraintStart_toStartOf="@id/ivRegistrationWhiteBox"
+            app:layout_constraintTop_toTopOf="@id/ivRegistrationWhiteBox">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:inputType="textPersonName" />
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textPersonName" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilRegistrationEmail"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:hint="@string/e_mail"
-        app:layout_constraintEnd_toEndOf="@id/tilRegistrationName"
-        app:layout_constraintStart_toStartOf="@id/tilRegistrationName"
-        app:layout_constraintTop_toBottomOf="@id/tilRegistrationName">
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilRegistrationEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/e_mail"
+            app:layout_constraintEnd_toEndOf="@id/tilRegistrationName"
+            app:layout_constraintStart_toStartOf="@id/tilRegistrationName"
+            app:layout_constraintTop_toBottomOf="@id/tilRegistrationName">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:inputType="textEmailAddress" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilRegistrationPassword"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:hint="@string/password"
-        app:layout_constraintEnd_toEndOf="@id/tilRegistrationEmail"
-        app:layout_constraintStart_toStartOf="@id/tilRegistrationEmail"
-        app:layout_constraintTop_toBottomOf="@id/tilRegistrationEmail">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:inputType="textPassword" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <Button
-        android:id="@+id/btRegistrationSave"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/save"
-        app:layout_constraintEnd_toEndOf="@id/tilRegistrationPassword"
-        app:layout_constraintStart_toStartOf="@id/tilRegistrationPassword"
-        app:layout_constraintTop_toBottomOf="@id/tilRegistrationPassword" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilRegistrationPassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/password"
+            app:layout_constraintEnd_toEndOf="@id/tilRegistrationEmail"
+            app:layout_constraintStart_toStartOf="@id/tilRegistrationEmail"
+            app:layout_constraintTop_toBottomOf="@id/tilRegistrationEmail">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btRegistrationSubmit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/save"
+            app:layout_constraintEnd_toEndOf="@id/tilRegistrationPassword"
+            app:layout_constraintStart_toStartOf="@id/tilRegistrationPassword"
+            app:layout_constraintTop_toBottomOf="@id/tilRegistrationPassword" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

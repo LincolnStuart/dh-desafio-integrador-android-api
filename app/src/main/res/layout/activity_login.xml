@@ -1,111 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context=".view.activity.LoginActivity">
 
-    <ImageView
-        android:id="@+id/ivLoginRedBox"
-        android:layout_width="0dp"
-        android:layout_height="375dp"
-        android:layout_margin="@dimen/margin_box_login"
-        android:contentDescription="@string/title_box"
-        android:src="@drawable/bg_red_box"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/tvLoginDescription"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/login_description"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@id/ivLoginRedBox"
-        app:layout_constraintStart_toStartOf="@id/ivLoginRedBox"
-        app:layout_constraintTop_toTopOf="@id/ivLoginRedBox" />
+        <ImageView
+            android:id="@+id/ivLoginRedBox"
+            style="@style/AuthRedBox"
+            android:layout_width="0dp"
+            android:layout_height="375dp"
+            android:contentDescription="@string/title_box"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
 
-    <ImageView
-        android:id="@+id/ivLoginWhiteBox"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="16dp"
-        android:contentDescription="@string/login_fields_box"
-        android:src="@drawable/bg_white_box"
-        app:layout_constraintBottom_toBottomOf="@id/ivLoginRedBox"
-        app:layout_constraintEnd_toEndOf="@id/ivLoginRedBox"
-        app:layout_constraintStart_toStartOf="@id/ivLoginRedBox"
-        app:layout_constraintTop_toBottomOf="@id/tvLoginDescription" />
+        <TextView
+            android:id="@+id/tvLoginDescription"
+            style="@style/AuthRedBoxText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_description"
+            app:layout_constraintEnd_toEndOf="@id/ivLoginRedBox"
+            app:layout_constraintStart_toStartOf="@id/ivLoginRedBox"
+            app:layout_constraintTop_toTopOf="@id/ivLoginRedBox" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilLoginEmail"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:hint="@string/e_mail"
-        app:layout_constraintEnd_toEndOf="@id/ivLoginWhiteBox"
-        app:layout_constraintStart_toStartOf="@id/ivLoginWhiteBox"
-        app:layout_constraintTop_toTopOf="@id/ivLoginWhiteBox">
+        <ImageView
+            android:id="@+id/ivLoginWhiteBox"
+            style="@style/AuthWhiteBox"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@string/login_fields_box"
+            app:layout_constraintBottom_toBottomOf="@id/ivLoginRedBox"
+            app:layout_constraintEnd_toEndOf="@id/ivLoginRedBox"
+            app:layout_constraintStart_toStartOf="@id/ivLoginRedBox"
+            app:layout_constraintTop_toBottomOf="@id/tvLoginDescription" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:inputType="textEmailAddress" />
-    </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilLoginEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:hint="@string/e_mail"
+            app:layout_constraintEnd_toEndOf="@id/ivLoginWhiteBox"
+            app:layout_constraintStart_toStartOf="@id/ivLoginWhiteBox"
+            app:layout_constraintTop_toTopOf="@id/ivLoginWhiteBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
 
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilLoginPassword"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:hint="@string/password"
-        app:layout_constraintEnd_toEndOf="@id/tilLoginEmail"
-        app:layout_constraintStart_toStartOf="@id/tilLoginEmail"
-        app:layout_constraintTop_toBottomOf="@id/tilLoginEmail">
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilLoginPassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/password"
+            app:layout_constraintEnd_toEndOf="@id/tilLoginEmail"
+            app:layout_constraintStart_toStartOf="@id/tilLoginEmail"
+            app:layout_constraintTop_toBottomOf="@id/tilLoginEmail">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:inputType="textPassword" />
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textPassword" />
 
-    <CheckBox
-        android:id="@+id/cbLoginRemember"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/remember"
-        android:checked="true"
-        app:layout_constraintEnd_toEndOf="@id/tilLoginPassword"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@id/tilLoginPassword"
-        app:layout_constraintTop_toBottomOf="@id/tilLoginPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:id="@+id/btLoginMainAction"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/log_in"
-        app:layout_constraintEnd_toEndOf="@id/tilLoginPassword"
-        app:layout_constraintStart_toStartOf="@id/cbLoginRemember"
-        app:layout_constraintTop_toBottomOf="@id/cbLoginRemember" />
+        <CheckBox
+            android:id="@+id/cbLoginRemember"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:checked="true"
+            android:text="@string/remember"
+            app:layout_constraintEnd_toEndOf="@id/tilLoginPassword"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/tilLoginPassword"
+            app:layout_constraintTop_toBottomOf="@id/tilLoginPassword" />
 
-    <TextView
-        android:id="@+id/tvLoginCreateAccount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:text="@string/create_account"
-        app:layout_constraintBottom_toBottomOf="@id/ivLoginWhiteBox"
-        app:layout_constraintEnd_toEndOf="@id/btLoginMainAction"
-        app:layout_constraintStart_toStartOf="@id/btLoginMainAction"
-        app:layout_constraintTop_toBottomOf="@id/btLoginMainAction" />
+        <Button
+            android:id="@+id/btLoginSubmit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/log_in"
+            app:layout_constraintEnd_toEndOf="@id/tilLoginPassword"
+            app:layout_constraintStart_toStartOf="@id/cbLoginRemember"
+            app:layout_constraintTop_toBottomOf="@id/cbLoginRemember" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/tvLoginCreateAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="@string/create_account"
+            app:layout_constraintBottom_toBottomOf="@id/ivLoginWhiteBox"
+            app:layout_constraintEnd_toEndOf="@id/btLoginSubmit"
+            app:layout_constraintStart_toStartOf="@id/btLoginSubmit"
+            app:layout_constraintTop_toBottomOf="@id/btLoginSubmit" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

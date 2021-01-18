@@ -1,6 +1,7 @@
-package com.github.lincolnstuart.desafiointegradorapimarvel.model
+package com.github.lincolnstuart.desafiointegradorapimarvel.model.comic
 
 import android.os.Parcelable
+import com.github.lincolnstuart.desafiointegradorapimarvel.model.comic.Data
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize

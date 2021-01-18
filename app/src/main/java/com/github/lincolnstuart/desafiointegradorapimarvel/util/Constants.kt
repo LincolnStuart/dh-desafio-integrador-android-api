@@ -1,5 +1,9 @@
 package com.github.lincolnstuart.desafiointegradorapimarvel.util
 
+import java.time.format.DateTimeFormatter
+import java.time.format.FormatStyle
+import java.util.*
+
 class Constants {
     object MarvelApi{
         const val BASE_URL = "https://gateway.marvel.com:443/v1/public/"
@@ -8,5 +12,10 @@ class Constants {
         //const val PUBLIC_KEY = "ad2817938e3a1987089127bdd96bcb09"
         const val PUBLIC_KEY = "6eb7e8896ec5850c52515a8a23ee97f0"
         const val IMAGE_PATH = "portrait_xlarge"
+    }
+
+    object Pattern{
+        const val JSON_INPUT_DATE = "yyyy-MM-dd"
+        const val OUTPUT_DATE = "MMMM dd, yyyy"
     }
 }

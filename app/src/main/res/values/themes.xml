@@ -14,15 +14,49 @@
         <!-- Customize your theme here. -->
         <item name="android:windowBackground">@color/blue</item>
         <item name="toolbarStyle">@style/MarvelToolbar</item>
+
     </style>
 
     <style name="MarvelToolbar" parent="@style/Widget.MaterialComponents.Toolbar">
-        <item name="titleTextAppearance">@style/MarvelToolbarAppearence</item>
+        <item name="titleTextAppearance">@style/MarvelToolbarAppearance</item>
     </style>
 
-    <style name="MarvelToolbarAppearence">
+
+
+    <style name="MarvelToolbarAppearance">
         <item name="android:fontFamily">@font/marvel</item>
     </style>
 
+    <style name="CustomTitle">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">@dimen/title</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="CustomText">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_marginTop">@dimen/regular_margin</item>
+    </style>
+
+    <style name="AuthRedBox">
+        <item name="android:layout_margin">@dimen/margin_box_login</item>
+        <item name="android:src">@drawable/bg_red_box</item>
+    </style>
+
+    <style name="AuthRedBoxText">
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="AuthWhiteBox">
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:src">@drawable/bg_white_box</item>
+    </style>
+
+    <style name="CustomLabel" parent="CustomText">
+        <item name="android:textStyle">bold</item>
+    </style>
 
 </resources>

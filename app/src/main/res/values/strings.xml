@@ -14,4 +14,18 @@
     <string name="person_add_background">Person add background</string>
     <string name="person_add">Person add</string>
     <string name="comic_poster">Comic poster</string>
+    <string name="published">Published:</string>
+    <string name="price">Price:</string>
+    <string name="character_thumbnail">Character thumbnail</string>
+
+    <!--PATTERNS-->
+    <string name="price_pattern">$ %1$s</string>
+    <string name="comic_number_pattern">#%1$s</string>
+
+    <!--VALIDATION MESSAGE-->
+    <string name="invalid_email">E-mail invalid (pattern doesn\'t match)</string>
+    <string name="invalid_password_minimum">Password invalid (value is too short)</string>
+    <string name="invalid_name_minimum">Name invalid (value is too short)</string>
+    <string name="pages">Pages:</string>
+
 </resources>

@@ -1,17 +1,16 @@
 package com.github.lincolnstuart.desafiointegradorapimarvel.view.adapter
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.github.lincolnstuart.desafiointegradorapimarvel.R
 import com.github.lincolnstuart.desafiointegradorapimarvel.databinding.ItemComicBinding
-import com.github.lincolnstuart.desafiointegradorapimarvel.model.Result
-import com.github.lincolnstuart.desafiointegradorapimarvel.util.Constants
+import com.github.lincolnstuart.desafiointegradorapimarvel.model.comic.Comic
 
 class ComicListAdapter(
-    private val comics: List<Result>,
-    private val onClickComic: (comic: Result) -> Unit
+    private val comics: List<Comic>,
+    private val onClickComic: (comic: Comic) -> Unit
 ) : RecyclerView.Adapter<ComicListAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -28,12 +27,11 @@ class ComicListAdapter(
     }
 
     class ViewHolder(private val binding: ItemComicBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(comic: Result, onClickComic: (comic: Result) -> Unit) = with(binding) {
+        fun bind(comic: Comic, onClickComic: (comic: Comic) -> Unit) = with(binding) {
             Glide.with(itemView)
-                .load("${comic.thumbnail.path}/${Constants.MarvelApi.IMAGE_PATH}.${comic.thumbnail.extension}")
+                .load(comic.thumbnail.fullPath())
                 .into(ivItemComicPoster)
-            Log.i("BINDING", "bind: ${comic.thumbnail.path}/${Constants.MarvelApi.IMAGE_PATH}.${comic.thumbnail.extension}")
-            tvItemComicSerieNumber.text = comic.issueNumber.toString()
+            tvItemComicSerieNumber.text = root.resources.getString(R.string.comic_number_pattern, comic.issueNumber.toString())
             itemView.setOnClickListener {
                 onClickComic(comic)
             }
