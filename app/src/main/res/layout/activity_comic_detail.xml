@@ -11,120 +11,132 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/ivComicDetailCharacter"
-        android:layout_width="0dp"
-        android:layout_height="300dp"
-        android:contentDescription="@string/character_thumbnail"
-        android:scaleType="centerCrop"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:src="@drawable/ic_launcher_background" />
+        <ImageView
+            android:id="@+id/ivComicDetailCharacter"
+            android:layout_width="0dp"
+            android:layout_height="300dp"
+            android:background="@color/red_500"
+            android:contentDescription="@string/character_thumbnail"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_launcher_background" />
 
-    <ImageView
-        android:id="@+id/ivComicDetailComic"
-        android:layout_width="100dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="200dp"
-        android:background="@drawable/bg_white_border"
-        android:contentDescription="@string/comic_poster"
-        android:cropToPadding="true"
-        android:padding="5dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:src="@drawable/ic_launcher_background" />
+        <ImageView
+            android:id="@+id/ivComicDetailComic"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="200dp"
+            android:background="@drawable/bg_white_border"
+            android:contentDescription="@string/comic_poster"
+            android:cropToPadding="true"
+            android:padding="5dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_launcher_background" />
 
-    <TextView
-        android:id="@+id/tvComicDetailTitle"
-        style="@style/CustomTitle"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/regular_margin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ivComicDetailComic"
-        tools:text="Title" />
+        <ImageView
+            android:id="@+id/ivComicDetailBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/regular_margin"
+            android:src="@drawable/ic_arrow_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white"
+            android:contentDescription="@string/back_button"/>
 
-    <TextView
-        android:id="@+id/tvComicDetailDescription"
-        style="@style/CustomText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="@id/tvComicDetailTitle"
-        app:layout_constraintStart_toStartOf="@id/tvComicDetailTitle"
-        app:layout_constraintTop_toBottomOf="@id/tvComicDetailTitle"
-        tools:text="Description" />
+        <TextView
+            android:id="@+id/tvComicDetailTitle"
+            style="@style/CustomTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/regular_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivComicDetailComic"
+            tools:text="Title" />
 
-    <TextView
-        android:id="@+id/tvComicDetailReleaseDateLabel"
-        style="@style/CustomLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/published"
-        app:layout_constraintStart_toStartOf="@id/tvComicDetailDescription"
-        app:layout_constraintTop_toBottomOf="@id/tvComicDetailDescription" />
+        <TextView
+            android:id="@+id/tvComicDetailDescription"
+            style="@style/CustomText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/tvComicDetailTitle"
+            app:layout_constraintStart_toStartOf="@id/tvComicDetailTitle"
+            app:layout_constraintTop_toBottomOf="@id/tvComicDetailTitle"
+            tools:text="Description" />
 
-    <TextView
-        android:id="@+id/tvComicDetailReleaseDateData"
-        style="@style/CustomText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/regular_margin"
-        android:ellipsize="end"
-        android:maxLines="1"
-        app:layout_constraintBottom_toBottomOf="@id/tvComicDetailReleaseDateLabel"
-        app:layout_constraintEnd_toEndOf="@id/tvComicDetailDescription"
-        app:layout_constraintStart_toEndOf="@id/tvComicDetailReleaseDateLabel"
-        tools:text="12th October 1990" />
+        <TextView
+            android:id="@+id/tvComicDetailReleaseDateLabel"
+            style="@style/CustomLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/published"
+            app:layout_constraintStart_toStartOf="@id/tvComicDetailDescription"
+            app:layout_constraintTop_toBottomOf="@id/tvComicDetailDescription" />
+
+        <TextView
+            android:id="@+id/tvComicDetailReleaseDateData"
+            style="@style/CustomText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/regular_margin"
+            android:ellipsize="end"
+            android:maxLines="1"
+            app:layout_constraintBottom_toBottomOf="@id/tvComicDetailReleaseDateLabel"
+            app:layout_constraintEnd_toEndOf="@id/tvComicDetailDescription"
+            app:layout_constraintStart_toEndOf="@id/tvComicDetailReleaseDateLabel"
+            tools:text="12th October 1990" />
 
 
-    <TextView
-        android:id="@+id/tvComicDetailPriceLabel"
-        style="@style/CustomLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/price"
-        app:layout_constraintStart_toStartOf="@id/tvComicDetailReleaseDateLabel"
-        app:layout_constraintTop_toBottomOf="@id/tvComicDetailReleaseDateLabel" />
+        <TextView
+            android:id="@+id/tvComicDetailPriceLabel"
+            style="@style/CustomLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price"
+            app:layout_constraintStart_toStartOf="@id/tvComicDetailReleaseDateLabel"
+            app:layout_constraintTop_toBottomOf="@id/tvComicDetailReleaseDateLabel" />
 
-    <TextView
-        android:id="@+id/tvComicDetailPriceData"
-        style="@style/CustomText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/regular_margin"
-        android:ellipsize="end"
-        android:maxLines="1"
-        app:layout_constraintBottom_toBottomOf="@id/tvComicDetailPriceLabel"
-        app:layout_constraintEnd_toEndOf="@id/tvComicDetailReleaseDateData"
-        app:layout_constraintStart_toEndOf="@id/tvComicDetailPriceLabel"
-        tools:text="$ 12.50" />
+        <TextView
+            android:id="@+id/tvComicDetailPriceData"
+            style="@style/CustomText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/regular_margin"
+            android:ellipsize="end"
+            android:maxLines="1"
+            app:layout_constraintBottom_toBottomOf="@id/tvComicDetailPriceLabel"
+            app:layout_constraintEnd_toEndOf="@id/tvComicDetailReleaseDateData"
+            app:layout_constraintStart_toEndOf="@id/tvComicDetailPriceLabel"
+            tools:text="$ 12.50" />
 
-    <TextView
-        android:id="@+id/tvComicDetailPagesLabel"
-        style="@style/CustomLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/pages"
-        app:layout_constraintStart_toStartOf="@id/tvComicDetailPriceLabel"
-        app:layout_constraintTop_toBottomOf="@id/tvComicDetailPriceLabel" />
+        <TextView
+            android:id="@+id/tvComicDetailPagesLabel"
+            style="@style/CustomLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pages"
+            app:layout_constraintStart_toStartOf="@id/tvComicDetailPriceLabel"
+            app:layout_constraintTop_toBottomOf="@id/tvComicDetailPriceLabel" />
 
-    <TextView
-        android:id="@+id/tvComicDetailPagesData"
-        style="@style/CustomText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/regular_margin"
-        android:ellipsize="end"
-        android:maxLines="1"
-        app:layout_constraintBottom_toBottomOf="@id/tvComicDetailPagesLabel"
-        app:layout_constraintEnd_toEndOf="@id/tvComicDetailPriceData"
-        app:layout_constraintStart_toEndOf="@id/tvComicDetailPagesLabel"
-        tools:text="32" />
+        <TextView
+            android:id="@+id/tvComicDetailPagesData"
+            style="@style/CustomText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/regular_margin"
+            android:ellipsize="end"
+            android:maxLines="1"
+            app:layout_constraintBottom_toBottomOf="@id/tvComicDetailPagesLabel"
+            app:layout_constraintEnd_toEndOf="@id/tvComicDetailPriceData"
+            app:layout_constraintStart_toEndOf="@id/tvComicDetailPagesLabel"
+            tools:text="32" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -27,5 +27,6 @@
     <string name="invalid_password_minimum">Password invalid (value is too short)</string>
     <string name="invalid_name_minimum">Name invalid (value is too short)</string>
     <string name="pages">Pages:</string>
+    <string name="back_button">Back button</string>
 
 </resources>

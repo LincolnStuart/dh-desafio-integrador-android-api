@@ -2,6 +2,7 @@ package com.github.lincolnstuart.desafiointegradorapimarvel.view.activity
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
@@ -9,8 +10,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import com.github.lincolnstuart.desafiointegradorapimarvel.R
 import com.github.lincolnstuart.desafiointegradorapimarvel.databinding.ActivityComicListBinding
-import com.github.lincolnstuart.desafiointegradorapimarvel.model.comic.ResponseMarvelApiComics
 import com.github.lincolnstuart.desafiointegradorapimarvel.model.comic.Comic
+import com.github.lincolnstuart.desafiointegradorapimarvel.model.comic.ResponseMarvelApiComics
 import com.github.lincolnstuart.desafiointegradorapimarvel.view.adapter.ComicListAdapter
 import com.github.lincolnstuart.desafiointegradorapimarvel.viewmodel.ComicListViewModel
 
@@ -26,15 +27,7 @@ class ComicListActivity : AppCompatActivity() {
         initComponents()
     }
 
-    private fun alterFontFamilyActionBar() {
-        val view = TextView(this)
-        view.text = supportActionBar?.title
-        view.typeface = ResourcesCompat.getFont(this, R.font.marvel)
-        supportActionBar?.customView = view
-    }
-
     private fun initComponents() {
-        alterFontFamilyActionBar()
         viewmodel = ViewModelProvider(this).get(ComicListViewModel::class.java)
         setupObservers()
         viewmodel.getComics()

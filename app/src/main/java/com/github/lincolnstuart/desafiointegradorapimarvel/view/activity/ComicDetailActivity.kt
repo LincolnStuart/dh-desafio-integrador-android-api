@@ -31,6 +31,9 @@ class ComicDetailActivity : AppCompatActivity() {
             viewModel.getCharacters(it.id)
             bindValues(it)
         }
+        binding.ivComicDetailBackButton.setOnClickListener {
+            finish()
+        }
     }
 
     private fun setupObservables(comic: Comic) {

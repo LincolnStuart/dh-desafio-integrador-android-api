@@ -1,17 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.activity.ComicListActivity">
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/ablComicList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="15dp"
+        tools:ignore="MissingConstraints"
+        tools:targetApi="lollipop">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tbComicList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/CustomToolbar">
+
+            <TextView
+                style="@style/CustomToolbar.TitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvComicListItems"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ablComicList"
         tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        tools:spanCount="3"
         tools:listitem="@layout/item_comic"
-        />
+        tools:spanCount="3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
